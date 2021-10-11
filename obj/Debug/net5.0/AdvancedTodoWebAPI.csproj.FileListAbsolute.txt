@@ -22,3 +22,5 @@ C:\Users\krzys\Downloads\DNPExamples-master\DNPExamples-master\WebAPI\AdvancedTo
 C:\Users\krzys\Downloads\DNPExamples-master\DNPExamples-master\WebAPI\AdvancedTodoWebAPI\obj\Debug\net5.0\AdvancedTodoWebAPI.pdb
 C:\Users\krzys\Downloads\DNPExamples-master\DNPExamples-master\WebAPI\AdvancedTodoWebAPI\obj\Debug\net5.0\AdvancedTodoWebAPI.genruntimeconfig.cache
 C:\Users\krzys\Downloads\DNPExamples-master\DNPExamples-master\WebAPI\AdvancedTodoWebAPI\bin\Debug\net5.0\families.json
+C:\Users\krzys\Downloads\DNPExamples-master\DNPExamples-master\WebAPI\AdvancedTodoWebAPI\bin\Debug\net5.0\adults.json
+C:\Users\krzys\Downloads\DNPExamples-master\DNPExamples-master\WebAPI\AdvancedTodoWebAPI\bin\Debug\net5.0\users.json

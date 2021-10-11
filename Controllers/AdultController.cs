@@ -11,18 +11,18 @@ using Models;
 namespace AdvancedTodoWebAPI.Controllers {
 [ApiController]
 [Route("[controller]")]
-public class TodosController : ControllerBase {
+public class AdultController : ControllerBase {
     private ITodosService todosService;
 
-    public TodosController(ITodosService todosService) {
+    public AdultController(ITodosService todosService) {
         this.todosService = todosService;
     }
 
     [HttpGet]
-    public async Task<ActionResult<IList<Family>>> 
+    public async Task<ActionResult<IList<Adult>>> 
         GetTodos([FromQuery] int? userId, [FromQuery] bool? isCompleted) {
         try {
-            IList<Family> todos = await todosService.GetTodosAsync();
+            IList<Adult> todos = await todosService.GetTodosAsync();
             string productsAsJson = JsonSerializer.Serialize(todos);
             return Ok(productsAsJson);
         } catch (Exception e) {
@@ -44,13 +44,13 @@ public class TodosController : ControllerBase {
     }
 
     [HttpPost]
-    public async Task<ActionResult<Family>> AddTodo([FromBody] Family family) {
+    public async Task<ActionResult<Adult>> AddTodo([FromBody] Adult adult) {
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
         try {
-            Family added = await todosService.AddTodoAsync(family);
+            Adult added = await todosService.AddTodoAsync(adult);
             return Created($"/{added.Id}",added); // return newly added to-do, to get the auto generated id
         } catch (Exception e) {
             Console.WriteLine(e);
@@ -60,9 +60,9 @@ public class TodosController : ControllerBase {
 
     [HttpPatch]
     [Route("{id:int}")]
-    public async Task<ActionResult<Family>> UpdateTodo([FromBody] Family family) {
+    public async Task<ActionResult<Adult>> UpdateTodo([FromBody] Adult adult) {
         try {
-            Family updatedFamily = await todosService.UpdateAsync(family);
+            Adult updatedFamily = await todosService.UpdateAsync(adult);
             return Ok(updatedFamily); 
         } catch (Exception e) {
             Console.WriteLine(e);

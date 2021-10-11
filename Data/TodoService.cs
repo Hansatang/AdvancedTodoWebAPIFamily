@@ -10,24 +10,24 @@ using Models;
 namespace AdvancedTodoWebAPI.Data {
 public class TodoService : ITodosService {
 
-    private string todoFile = "families.json";
-    private IList<Family> families;
+    private string todoFile = "adults.json";
+    private IList<Adult> families;
 
     public TodoService() {
         if (!File.Exists(todoFile)) {
             WriteTodosToFile();
         } else {
             string content = File.ReadAllText(todoFile);
-            families = JsonSerializer.Deserialize<List<Family>>(content);
+            families = JsonSerializer.Deserialize<List<Adult>>(content);
         }
     }
 
-    public async Task<IList<Family>> GetTodosAsync() {
-        List<Family> tmp = new List<Family>(families);
+    public async Task<IList<Adult>> GetTodosAsync() {
+        List<Adult> tmp = new List<Adult>(families);
         return tmp;
     }
 
-    public async Task<Family> AddTodoAsync(Family family) {
+    public async Task<Adult> AddTodoAsync(Adult family) {
         int max = families.Max(todo => todo.Id);
         family.Id = (++max);
         families.Add(family);
@@ -36,13 +36,13 @@ public class TodoService : ITodosService {
     }
 
     public async Task RemoveTodoAsync(int todoId) {
-        Family toRemove = families.First(t => t.Id == todoId);
+        Adult toRemove = families.First(t => t.Id == todoId);
         families.Remove(toRemove);
         WriteTodosToFile();
     }
 
-    public async Task<Family> UpdateAsync(Family family) {
-        Family toUpdate = families.FirstOrDefault(t => t.Id == family.Id);
+    public async Task<Adult> UpdateAsync(Adult family) {
+        Adult toUpdate = families.FirstOrDefault(t => t.Id == family.Id);
         if(toUpdate == null) throw new Exception($"Did not find todo with id: {family.Id}");
         WriteTodosToFile();
         return toUpdate;

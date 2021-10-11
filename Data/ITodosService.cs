@@ -5,9 +5,9 @@ using Models;
 
 namespace AdvancedTodoWebAPI.Data {
 public interface ITodosService {
-    Task<IList<Family>> GetTodosAsync();
-    Task<Family>   AddTodoAsync(Family family);
+    Task<IList<Adult>> GetTodosAsync();
+    Task<Adult>   AddTodoAsync(Adult family);
     Task   RemoveTodoAsync(int todoId);
-    Task<Family>   UpdateAsync(Family family);
+    Task<Adult>   UpdateAsync(Adult family);
 }
 }
