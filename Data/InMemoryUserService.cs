@@ -10,23 +10,24 @@ namespace AdvancedTodoWebAPI.Data
 {
     public class InMemoryUserService : IUserService
     {
-        private string todoFile = "users.json";
+        private string usersFile = "users.json";
         private ICollection<User> users;
 
         public InMemoryUserService()
         {
-            if (!File.Exists(todoFile))
+            if (!File.Exists(usersFile))
             {
-                WriteTodosToFile();
+                WriteUsersToFile();
             }
             else
             {
-                string content = File.ReadAllText(todoFile);
+                string content = File.ReadAllText(usersFile);
                 users = JsonSerializer.Deserialize<List<User>>(content);
             }
         }
-        
-        public async Task<IList<User>> GetTodosAsync() {
+
+        public async Task<IList<User>> GetUsersAsync()
+        {
             List<User> tmp = new List<User>(users);
             return tmp;
         }
@@ -38,22 +39,23 @@ namespace AdvancedTodoWebAPI.Data
             {
                 return user;
             }
+
             throw new Exception("User not found");
         }
 
-        public async Task<User> AddUserAsync(User adult)
+        public async Task<User> AddUserAsync(User user)
         {
-            Console.WriteLine(adult.UserName);
-            users.Add(adult);
-            WriteTodosToFile();
-            return adult;
+            Console.WriteLine(user.UserName);
+            users.Add(user);
+            WriteUsersToFile();
+            return user;
         }
-        private void WriteTodosToFile() {
+
+        private void WriteUsersToFile()
+        {
             string productsAsJson = JsonSerializer.Serialize(users);
-        
-            File.WriteAllText(todoFile, productsAsJson);
+
+            File.WriteAllText(usersFile, productsAsJson);
         }
     }
 }
-
-

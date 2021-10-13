@@ -1,75 +1,93 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using AdvancedTodoWebAPI.Data;
-
 using Microsoft.AspNetCore.Mvc;
 using Models;
 
-namespace AdvancedTodoWebAPI.Controllers {
-[ApiController]
-[Route("[controller]")]
-public class AdultController : ControllerBase {
-    private ITodosService todosService;
+namespace AdvancedTodoWebAPI.Controllers
+{
+    [ApiController]
+    [Route("[controller]")]
+    public class AdultController : ControllerBase
+    {
+        private IAdultService _adultService;
 
-    public AdultController(ITodosService todosService) {
-        this.todosService = todosService;
-    }
-
-    [HttpGet]
-    public async Task<ActionResult<IList<Adult>>> 
-        GetTodos([FromQuery] int? userId, [FromQuery] bool? isCompleted) {
-        try {
-            IList<Adult> todos = await todosService.GetTodosAsync();
-            string productsAsJson = JsonSerializer.Serialize(todos);
-            return Ok(productsAsJson);
-        } catch (Exception e) {
-            Console.WriteLine(e);
-            return StatusCode(500, e.Message);
-        }
-    }
-
-    [HttpDelete]
-    [Route("{id:int}")]
-    public async Task<ActionResult> DeleteTodo([FromRoute] int id) {
-        try {
-            await todosService.RemoveTodoAsync(id);
-            return Ok();
-        } catch (Exception e) {
-            Console.WriteLine(e);
-            return StatusCode(500, e.Message);
-        }
-    }
-
-    [HttpPost]
-    public async Task<ActionResult<Adult>> AddTodo([FromBody] Adult adult) {
-        if (!ModelState.IsValid)
+        public AdultController(IAdultService adultService)
         {
-            return BadRequest(ModelState);
+            this._adultService = adultService;
         }
-        try {
-            Adult added = await todosService.AddTodoAsync(adult);
-            return Created($"/{added.Id}",added); // return newly added to-do, to get the auto generated id
-        } catch (Exception e) {
-            Console.WriteLine(e);
-            return StatusCode(500, e.Message);
-        }
-    }
 
-    [HttpPatch]
-    [Route("{id:int}")]
-    public async Task<ActionResult<Adult>> UpdateTodo([FromBody] Adult adult) {
-        try {
-            Console.WriteLine(adult.FirstName);
-            Adult updatedFamily = await todosService.UpdateAsync(adult);
-            Console.WriteLine(updatedFamily.FirstName);
-            return Ok(updatedFamily); 
-        } catch (Exception e) {
-            Console.WriteLine(e);
-            return StatusCode(500, e.Message);
+        [HttpGet]
+        public async Task<ActionResult<IList<Adult>>>
+            GetAdults()
+        {
+            try
+            {
+                IList<Adult> adults = await _adultService.GetAdultsAsync();
+                string productsAsJson = JsonSerializer.Serialize(adults);
+                return Ok(productsAsJson);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
+        }
+
+        [HttpDelete]
+        [Route("{id:int}")]
+        public async Task<ActionResult> DeleteTodo([FromRoute] int id)
+        {
+            try
+            {
+                await _adultService.RemoveAdultAsync(id);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Adult>> AddTodo([FromBody] Adult adult)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                Adult added = await _adultService.AddAdultAsync(adult);
+                return Created($"/{added.Id}", added); // return newly added to-do, to get the auto generated id
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
+        }
+
+        [HttpPatch]
+        [Route("{id:int}")]
+        public async Task<ActionResult<Adult>> UpdateTodo([FromBody] Adult adult)
+        {
+            try
+            {
+                Console.WriteLine(adult.FirstName);
+                Adult updatedAdult = await _adultService.UpdateAsync(adult);
+                Console.WriteLine(updatedAdult.FirstName);
+                return Ok(updatedAdult);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
         }
     }
-}
 }
