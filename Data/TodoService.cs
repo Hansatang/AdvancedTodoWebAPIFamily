@@ -43,6 +43,7 @@ public class TodoService : ITodosService {
 
     public async Task<Adult> UpdateAsync(Adult family) {
         Adult toUpdate = families.FirstOrDefault(t => t.Id == family.Id);
+        families[family.Id] = family;
         if(toUpdate == null) throw new Exception($"Did not find todo with id: {family.Id}");
         WriteTodosToFile();
         return toUpdate;

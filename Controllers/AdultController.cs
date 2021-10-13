@@ -62,7 +62,9 @@ public class AdultController : ControllerBase {
     [Route("{id:int}")]
     public async Task<ActionResult<Adult>> UpdateTodo([FromBody] Adult adult) {
         try {
+            Console.WriteLine(adult.FirstName);
             Adult updatedFamily = await todosService.UpdateAsync(adult);
+            Console.WriteLine(updatedFamily.FirstName);
             return Ok(updatedFamily); 
         } catch (Exception e) {
             Console.WriteLine(e);

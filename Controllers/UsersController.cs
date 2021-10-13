@@ -41,13 +41,13 @@ namespace AdvancedTodoWebAPI.Controllers
         }
         
         [HttpPost]
-        public async Task<ActionResult<User>> AddUser([FromBody] User adult) {
+        public async Task<ActionResult<User>> AddUser([FromBody] User user) {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
             try {
-                User added = await userService.AddUserAsync(adult);
+                User added = await userService.AddUserAsync(user);
                 Console.WriteLine(added.UserName+"hej");
                 return Created($"/{added}",added); // return newly added to-do, to get the auto generated id
             } catch (Exception e) {
