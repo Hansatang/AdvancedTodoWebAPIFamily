@@ -78,10 +78,8 @@ namespace AdvancedTodoWebAPI.Controllers
         {
             try
             {
-                Console.WriteLine(adult.FirstName);
-                Adult updatedAdult = await _adultService.UpdateAsync(adult);
-                Console.WriteLine(updatedAdult.FirstName);
-                return Ok(updatedAdult);
+                await _adultService.UpdateAsync(adult);
+                return Ok();
             }
             catch (Exception e)
             {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qyhYqG8X9teb8reYdltXosw7dDSRC43+BdNntNKoJ1e5jb+de5B+14GjKSdJCxzRWdiJ9gBJmTUwr5pdW3K/9A==",
+  "dgSpecHash": "blpU4BXYslHzhwjh1lF6wRBv4QsZdVUbmHppqNRk/hBGmacnpj6aL+Otgq2cQ2V67eXNBudVpOgiYJN8e/8phA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\krzys\\Downloads\\DNPExamples-master\\DNPExamples-master\\WebAPI\\AdvancedTodoWebAPI\\AdvancedTodoWebAPI.csproj",
+  "projectFilePath": "C:\\Users\\krzys\\Downloads\\DNPExamples-master\\DNPExamples-master\\WebAPI\\RestAssigment3\\RestAssigment3.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

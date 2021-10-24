@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\krzys\\Downloads\\DNPExamples-master\\DNPExamples-master\\WebAPI\\AdvancedTodoWebAPI\\AdvancedTodoWebAPI.csproj",
-      "projectName": "AdvancedTodoWebAPI",
-      "projectPath": "C:\\Users\\krzys\\Downloads\\DNPExamples-master\\DNPExamples-master\\WebAPI\\AdvancedTodoWebAPI\\AdvancedTodoWebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\krzys\\Downloads\\DNPExamples-master\\DNPExamples-master\\WebAPI\\RestAssigment3\\RestAssigment3.csproj",
+      "projectName": "RestAssigment3",
+      "projectPath": "C:\\Users\\krzys\\Downloads\\DNPExamples-master\\DNPExamples-master\\WebAPI\\RestAssigment3\\RestAssigment3.csproj",
       "packagesPath": "C:\\Users\\krzys\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\krzys\\Downloads\\DNPExamples-master\\DNPExamples-master\\WebAPI\\AdvancedTodoWebAPI\\obj\\",
+      "outputPath": "C:\\Users\\krzys\\Downloads\\DNPExamples-master\\DNPExamples-master\\WebAPI\\RestAssigment3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\krzys\\AppData\\Roaming\\NuGet\\NuGet.Config"
