@@ -20,8 +20,7 @@ namespace AdvancedTodoWebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IList<Adult>>>
-            GetAdults()
+        public async Task<ActionResult<IList<Adult>>> GetAdults()
         {
             try
             {
@@ -38,7 +37,7 @@ namespace AdvancedTodoWebAPI.Controllers
 
         [HttpDelete]
         [Route("{id:int}")]
-        public async Task<ActionResult> DeleteTodo([FromRoute] int id)
+        public async Task<ActionResult> DeleteAdult([FromRoute] int id)
         {
             try
             {
@@ -53,13 +52,12 @@ namespace AdvancedTodoWebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Adult>> AddTodo([FromBody] Adult adult)
+        public async Task<ActionResult<Adult>> AddAdult([FromBody] Adult adult)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
             try
             {
                 Adult added = await _adultService.AddAdultAsync(adult);
@@ -74,7 +72,7 @@ namespace AdvancedTodoWebAPI.Controllers
 
         [HttpPatch]
         [Route("{id:int}")]
-        public async Task<ActionResult<Adult>> UpdateTodo([FromBody] Adult adult)
+        public async Task<ActionResult<Adult>> UpdateAdult([FromBody] Adult adult)
         {
             try
             {
