@@ -5,8 +5,38 @@
     <projectFile profileName="AdvancedTodoWebAPI">RestAssigment3.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="491d7b01-3ec1-4e7a-8fbd-5de1799bd6c7" name="Changes" comment="26">
+    <list default="true" id="491d7b01-3ec1-4e7a-8fbd-5de1799bd6c7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Models/Persistence/AdultContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RestAssigment3.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RestAssigment3.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/AdultController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AdultController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/AdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AdultService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Adult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Adult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Child.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Interest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Job.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Job.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Person.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Pet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestAssigment3.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RestAssigment3.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adults.json" beforeDir="false" afterPath="$PROJECT_DIR$/adults.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/RestAssigment3.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/RestAssigment3.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/RestAssigment3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/RestAssigment3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/RestAssigment3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/RestAssigment3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/adults.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/adults.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/ref/RestAssigment3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/ref/RestAssigment3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/RestAssigment3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/RestAssigment3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/RestAssigment3.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/RestAssigment3.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/RestAssigment3.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/RestAssigment3.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +44,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Adult" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1zwQaI7A7Be1eZSJmeIsiYjHKBf" />
@@ -25,6 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.RestAssigment3: AdvancedTodoWebAPI">
@@ -69,7 +105,12 @@
       <updated>1635056731606</updated>
       <workItem from="1635056735456" duration="61000" />
       <workItem from="1635142306170" duration="4184000" />
-      <workItem from="1635248325545" duration="868000" />
+      <workItem from="1635248325545" duration="2384000" />
+      <workItem from="1635705434585" duration="73000" />
+      <workItem from="1635755423648" duration="1184000" />
+      <workItem from="1635756627360" duration="214000" />
+      <workItem from="1635756856987" duration="3811000" />
+      <workItem from="1635760712914" duration="1207000" />
     </task>
     <task id="LOCAL-00001" summary="HMMM">
       <created>1635056774581</created>
@@ -92,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635248577222</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Hej">
+      <created>1635249263817</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1635249263817</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +166,7 @@
     <MESSAGE value="HMMM" />
     <MESSAGE value="25/10 Version" />
     <MESSAGE value="26" />
-    <option name="LAST_COMMIT_MESSAGE" value="26" />
+    <MESSAGE value="Hej" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hej" />
   </component>
 </project>

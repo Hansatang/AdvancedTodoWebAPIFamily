@@ -54,12 +54,15 @@ namespace AdvancedTodoWebAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Adult>> AddAdult([FromBody] Adult adult)
         {
+            Console.WriteLine(1);
             if (!ModelState.IsValid)
             {
+                Console.WriteLine(2);
                 return BadRequest(ModelState);
             }
             try
             {
+                Console.WriteLine(3);
                 Adult added = await _adultService.AddAdultAsync(adult);
                 return Created($"/{added.Id}", added); // return newly added to-do, to get the auto generated id
             }

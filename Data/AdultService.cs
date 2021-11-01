@@ -4,64 +4,80 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
+using AdvancedTodoWebAPI.Models.Persistence;
+using Microsoft.EntityFrameworkCore;
 using Models;
 
 namespace AdvancedTodoWebAPI.Data
 {
     public class AdultService : IAdultService
     {
-        private string adultsFile = "adults.json";
-        private IList<Adult> adults;
-
-        public AdultService()
-        {
-            if (!File.Exists(adultsFile))
-            {
-                WriteAdultsToFile();
-            }
-            else
-            {
-                string content = File.ReadAllText(adultsFile);
-                adults = JsonSerializer.Deserialize<List<Adult>>(content);
-            }
-        }
-
         public async Task<IList<Adult>> GetAdultsAsync()
         {
-            List<Adult> tmp = new List<Adult>(adults);
-            return tmp;
+            Console.WriteLine("Get");
+            using (AdultContext lb = new AdultContext())
+            {
+                IList<Adult> first = lb.Adults.Include(adult => adult.JobTitle).ToList();
+                return first;
+            }
         }
 
         public async Task<Adult> AddAdultAsync(Adult adult)
         {
-            int max = adults.Max(todo => todo.Id);
-            adult.Id = (++max);
-            adults.Add(adult);
-            WriteAdultsToFile();
-            return adult;
+            Console.WriteLine("Add");
+            using (AdultContext lb = new AdultContext())
+            {
+                Job a = new Job
+                {
+                    Id = adult.Id + 1,
+                    JobTitle = adult.JobTitle.JobTitle,
+                    Salary = adult.JobTitle.Salary
+                };
+                Adult g = new Adult
+                {
+                    Id = adult.Id + 1,
+                    FirstName = adult.FirstName,
+                    LastName = adult.LastName,
+                    HairColor = adult.HairColor,
+                    EyeColor = adult.EyeColor,
+                    Age = adult.Age,
+                    Weight = adult.Weight,
+                    Height = adult.Height,
+                    Sex = adult.Sex,
+                    JobTitle = a
+                };
+                lb.Adults.Add(g);
+
+                await lb.SaveChangesAsync();
+                return g;
+            }
         }
 
-        public async Task RemoveAdultAsync(int todoId)
+
+        public async Task RemoveAdultAsync(int Id)
         {
-            Adult toRemove = adults.First(t => t.Id == todoId);
-            adults.Remove(toRemove);
-            WriteAdultsToFile();
+            Console.WriteLine("Remove");
+            using (AdultContext lb = new AdultContext())
+            {
+                lb.Adults.Remove(new Adult() {Id = Id});
+                await lb.SaveChangesAsync();
+            }
         }
 
         public async Task<Adult> UpdateAsync(Adult adult)
         {
-            Adult toUpdate = adults.FirstOrDefault(t => t.Id == adult.Id);
-            adults[adult.Id] = adult;
-            if (toUpdate == null) throw new Exception($"Did not find todo with id: {adult.Id}");
-            WriteAdultsToFile();
-            return toUpdate;
-        }
+            Console.WriteLine("Update");
+            using (AdultContext lb = new AdultContext())
+            {
+                lb.Entry(await lb.Adults.FirstOrDefaultAsync(x => x.Id == adult.Id)).CurrentValues.SetValues(adult);
+                await lb.SaveChangesAsync();
+                return adult;
 
-        private void WriteAdultsToFile()
-        {
-            string productsAsJson = JsonSerializer.Serialize(adults);
-
-            File.WriteAllText(adultsFile, productsAsJson);
+                // Adult adultToChange = lb.Adults.FirstOrDefault(adult => adult.Id == adult.Id);
+                // adultToChange = adult;
+                // await lb.SaveChangesAsync();
+                // return adultToChange;
+            }
         }
     }
 }
