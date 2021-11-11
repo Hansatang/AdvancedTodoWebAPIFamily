@@ -8,7 +8,7 @@ namespace Models
     {
         [Required]
         [Range(1, int.MaxValue, ErrorMessage = "Please enter a value bigger than {1}")]
-        [JsonPropertyName("Id"), Key] 
+        [JsonPropertyName("Id"), Key]
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -18,7 +18,6 @@ namespace Models
         public double Weight { get; set; }
         public int Height { get; set; }
         public string Sex { get; set; }
-        
         public Job JobTitle { get; set; }
     }
 }

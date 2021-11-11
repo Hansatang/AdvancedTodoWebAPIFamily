@@ -24,9 +24,9 @@ namespace AdvancedTodoWebAPI.Controllers
         public async Task<ActionResult<User>>
             ValidateUser([FromQuery] string? username, [FromQuery] string? password)
         {
-            Console.WriteLine("Here");
             try
             {
+                Console.WriteLine("SENT: Username: " + username + " |   Password: " + password);
                 User user = await userService.ValidateUser(username, password);
                 string productsAsJson = JsonSerializer.Serialize(user);
                 Console.WriteLine("OK");

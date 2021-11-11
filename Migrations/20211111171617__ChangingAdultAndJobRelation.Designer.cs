@@ -3,14 +3,16 @@ using System;
 using AdvancedTodoWebAPI.Models.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AdvancedTodoWebAPI.Migrations
 {
     [DbContext(typeof(AdultContext))]
-    partial class AdultContextModelSnapshot : ModelSnapshot
+    [Migration("20211111171617__ChangingAdultAndJobRelation")]
+    partial class _ChangingAdultAndJobRelation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,24 +28,29 @@ namespace AdvancedTodoWebAPI.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("EyeColor")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FirstName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("HairColor")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Height")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("JobTitleId")
+                    b.Property<int?>("JobId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("LastName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Sex")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<double>("Weight")
@@ -51,7 +58,7 @@ namespace AdvancedTodoWebAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("JobTitleId");
+                    b.HasIndex("JobId");
 
                     b.ToTable("Adults");
                 });
@@ -63,6 +70,7 @@ namespace AdvancedTodoWebAPI.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("JobTitle")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Salary")
@@ -100,11 +108,11 @@ namespace AdvancedTodoWebAPI.Migrations
 
             modelBuilder.Entity("Models.Adult", b =>
                 {
-                    b.HasOne("Models.Job", "JobTitle")
+                    b.HasOne("Models.Job", "Job")
                         .WithMany()
-                        .HasForeignKey("JobTitleId");
+                        .HasForeignKey("JobId");
 
-                    b.Navigation("JobTitle");
+                    b.Navigation("Job");
                 });
 #pragma warning restore 612, 618
         }

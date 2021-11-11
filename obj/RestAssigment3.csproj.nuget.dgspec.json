@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\krzys\\Downloads\\DNPExamples-master\\DNPExamples-master\\WebAPI\\RestAssigment3\\RestAssigment3.csproj": {}
+    "D:\\Onedrive\\OneDrive - ViaUC\\Dokumenter\\GitHub\\AdvancedTodoWebAPIFamily\\RestAssigment3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\krzys\\Downloads\\DNPExamples-master\\DNPExamples-master\\WebAPI\\RestAssigment3\\RestAssigment3.csproj": {
+    "D:\\Onedrive\\OneDrive - ViaUC\\Dokumenter\\GitHub\\AdvancedTodoWebAPIFamily\\RestAssigment3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\krzys\\Downloads\\DNPExamples-master\\DNPExamples-master\\WebAPI\\RestAssigment3\\RestAssigment3.csproj",
+        "projectUniqueName": "D:\\Onedrive\\OneDrive - ViaUC\\Dokumenter\\GitHub\\AdvancedTodoWebAPIFamily\\RestAssigment3.csproj",
         "projectName": "RestAssigment3",
-        "projectPath": "C:\\Users\\krzys\\Downloads\\DNPExamples-master\\DNPExamples-master\\WebAPI\\RestAssigment3\\RestAssigment3.csproj",
-        "packagesPath": "C:\\Users\\krzys\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\krzys\\Downloads\\DNPExamples-master\\DNPExamples-master\\WebAPI\\RestAssigment3\\obj\\",
+        "projectPath": "D:\\Onedrive\\OneDrive - ViaUC\\Dokumenter\\GitHub\\AdvancedTodoWebAPIFamily\\RestAssigment3.csproj",
+        "packagesPath": "C:\\Users\\esben\\.nuget\\packages\\",
+        "outputPath": "D:\\Onedrive\\OneDrive - ViaUC\\Dokumenter\\GitHub\\AdvancedTodoWebAPIFamily\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\krzys\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\esben\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

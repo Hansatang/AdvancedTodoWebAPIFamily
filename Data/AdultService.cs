@@ -25,11 +25,11 @@ namespace AdvancedTodoWebAPI.Data
         public async Task<Adult> AddAdultAsync(Adult adult)
         {
             Console.WriteLine("Add");
-            using (AdultContext lb = new AdultContext())
+            Console.WriteLine(adult.Id);
+            await using (AdultContext lb = new AdultContext())
             {
                 Job a = new Job
                 {
-                    Id = adult.Id + 1,
                     JobTitle = adult.JobTitle.JobTitle,
                     Salary = adult.JobTitle.Salary
                 };
@@ -46,7 +46,7 @@ namespace AdvancedTodoWebAPI.Data
                     Sex = adult.Sex,
                     JobTitle = a
                 };
-                lb.Adults.Add(g);
+                await lb.Adults.AddAsync(g);
 
                 await lb.SaveChangesAsync();
                 return g;

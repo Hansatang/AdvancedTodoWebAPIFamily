@@ -6,6 +6,7 @@ namespace AdvancedTodoWebAPI.Models.Persistence
     public class AdultContext : DbContext
     {
         public DbSet<Adult> Adults { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Job> Jobs { get; set; }
     
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {

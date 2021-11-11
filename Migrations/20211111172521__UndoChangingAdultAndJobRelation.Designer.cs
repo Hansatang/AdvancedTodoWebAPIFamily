@@ -3,14 +3,16 @@ using System;
 using AdvancedTodoWebAPI.Models.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AdvancedTodoWebAPI.Migrations
 {
     [DbContext(typeof(AdultContext))]
-    partial class AdultContextModelSnapshot : ModelSnapshot
+    [Migration("20211111172521__UndoChangingAdultAndJobRelation")]
+    partial class _UndoChangingAdultAndJobRelation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
