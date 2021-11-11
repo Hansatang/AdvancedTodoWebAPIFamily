@@ -6,37 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="491d7b01-3ec1-4e7a-8fbd-5de1799bd6c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Models/Persistence/AdultContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RestAssigment3.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RestAssigment3.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/AdultController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/AdultController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/AdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/AdultService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Adult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Adult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Child.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Interest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Job.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Job.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Person.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Pet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestAssigment3.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RestAssigment3.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adults.json" beforeDir="false" afterPath="$PROJECT_DIR$/adults.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/RestAssigment3.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/RestAssigment3.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/RestAssigment3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/RestAssigment3.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/RestAssigment3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/RestAssigment3.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/adults.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/adults.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/ref/RestAssigment3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/ref/RestAssigment3.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/RestAssigment3.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/RestAssigment3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/RestAssigment3.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/RestAssigment3.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/RestAssigment3.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/RestAssigment3.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/RestAssigment3.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +80,12 @@
       <workItem from="1635755423648" duration="1184000" />
       <workItem from="1635756627360" duration="214000" />
       <workItem from="1635756856987" duration="3811000" />
-      <workItem from="1635760712914" duration="1207000" />
+      <workItem from="1635760712914" duration="1396000" />
+      <workItem from="1635928212043" duration="37000" />
+      <workItem from="1635958175866" duration="3000" />
+      <workItem from="1636096482895" duration="10000" />
+      <workItem from="1636464198838" duration="25000" />
+      <workItem from="1636484878563" duration="168000" />
     </task>
     <task id="LOCAL-00001" summary="HMMM">
       <created>1635056774581</created>
@@ -140,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635249263817</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Working Adult">
+      <created>1635761992946</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1635761992946</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +149,7 @@
     <MESSAGE value="25/10 Version" />
     <MESSAGE value="26" />
     <MESSAGE value="Hej" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hej" />
+    <MESSAGE value="Working Adult" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working Adult" />
   </component>
 </project>
